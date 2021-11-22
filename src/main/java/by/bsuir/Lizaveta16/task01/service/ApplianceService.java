@@ -9,8 +9,8 @@ import java.util.List;
 public interface ApplianceService {
 
 	List<Appliance> find(Criteria criteria);
-	List<Appliance> sort(Comparator<Appliance> comparator);
 	List<Appliance> getMin(Comparator<Appliance> comparator);
-	List<Appliance> getMax(Comparator<Appliance> comparator);
+	List<Appliance> getSorted(Comparator<Appliance> comparator);
+	void save(List<Appliance> appliances);
 	
 }

@@ -16,15 +16,12 @@ public class ApplianceServiceImpl implements ApplianceService{
 
 	@Override
 	public List<Appliance> find(Criteria criteria) {
-		return null;
-	}
-
-	@Override
-	public List<Appliance> sort(Comparator<Appliance> comparator) {
-		DAOFactory factory = DAOFactory.getInstance();
-		List<Appliance> appliances = factory.getApplianceDAO().parseAll();
-		appliances.sort(comparator);
-		return appliances;
+		if (Validator.validCriteria(criteria)) {
+			ApplianceDAO applianceDAO = DAOFactory.getInstance().getApplianceDAO();
+			return applianceDAO.find(criteria);
+		}
+		else
+			return null;
 	}
 
 	@Override
@@ -42,17 +39,17 @@ public class ApplianceServiceImpl implements ApplianceService{
 	}
 
 	@Override
-	public List<Appliance> getMax(Comparator<Appliance> comparator) {
+	public List<Appliance> getSorted(Comparator<Appliance> comparator) {
 		DAOFactory factory = DAOFactory.getInstance();
 		List<Appliance> appliances = factory.getApplianceDAO().parseAll();
-		Appliance max = appliances.stream().max(comparator).orElse(null);
-		if (max != null) {
-			return appliances.stream()
-					.filter(p -> comparator.compare(p, max) == 0)
-					.collect(Collectors.toList());
-		}
+		appliances.sort(comparator);
+		return appliances;
+	}
 
-		return new ArrayList<>();
+	@Override
+	public void save(List<Appliance> appliances) {
+		DAOFactory factory = DAOFactory.getInstance();
+		factory.getApplianceDAO().save(appliances);
 	}
 
 }

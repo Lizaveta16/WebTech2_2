@@ -9,8 +9,8 @@
         <module name="jwd_lab2" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="10">
-      <module name="jwd_lab2" target="8" />
+    <bytecodeTargetLevel target="15">
+      <module name="jwd_lab2" target="15" />
     </bytecodeTargetLevel>
   </component>
 </project>
