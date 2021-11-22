@@ -1,5 +1,8 @@
 package by.bsuir.Lizaveta16.task01.entity;
 
+/**
+ * The type of VacuumCleaner
+ */
 public class VacuumCleaner extends Appliance{
     private double powerConsumption;
     private String filterType;

@@ -1,15 +1,11 @@
 package by.bsuir.Lizaveta16.task01.main;
 
-import by.bsuir.Lizaveta16.task01.dao.impl.ApplianceDAOImpl;
 import by.bsuir.Lizaveta16.task01.entity.Appliance;
-import by.bsuir.Lizaveta16.task01.entity.*;
 import by.bsuir.Lizaveta16.task01.entity.criteria.Criteria;
 import by.bsuir.Lizaveta16.task01.entity.criteria.SearchCriteria;
-import by.bsuir.Lizaveta16.task01.entity.enums.Color;
 import by.bsuir.Lizaveta16.task01.service.ApplianceService;
 import by.bsuir.Lizaveta16.task01.service.ServiceFactory;
 
-import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 

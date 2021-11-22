@@ -2,6 +2,9 @@ package by.bsuir.Lizaveta16.task01.entity;
 
 import by.bsuir.Lizaveta16.task01.entity.enums.OS;
 
+/**
+ * The type of Laptop
+ */
 public class Laptop extends Appliance{
     private double batteryCapacity;
     private OS os;

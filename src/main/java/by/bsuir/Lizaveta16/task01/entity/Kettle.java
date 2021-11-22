@@ -2,6 +2,9 @@ package by.bsuir.Lizaveta16.task01.entity;
 
 import by.bsuir.Lizaveta16.task01.entity.enums.Color;
 
+/**
+ * The type of Kettle
+ */
 public class Kettle extends Appliance{
     private int powerConsumption;
     private double waterCapacity;

@@ -1,5 +1,8 @@
 package by.bsuir.Lizaveta16.task01.entity;
 
+/**
+ * The type of Oven
+ */
 public class Oven extends Appliance{
     private int powerConsumption;
     private double weight;

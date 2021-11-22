@@ -12,10 +12,21 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-
+/**
+ * DAO implementation using xml file as storage.
+ */
 public class ApplianceDAOImpl implements ApplianceDAO {
 
+	/**
+	 * Path to xml file
+	 */
 	private static final String path = "src\\main\\resources\\appliances_db.xml";
+
+	/**
+	 * Finds appliances that fit certain criteria.
+	 * @param criteria a set of criteria
+	 * @return list of appliances that fit the criteria
+	 */
 	@Override
 	public List<Appliance> find(Criteria criteria) {
 		List<Appliance> foundAppliances = new ArrayList<>();
@@ -31,7 +42,6 @@ public class ApplianceDAOImpl implements ApplianceDAO {
 			} while (appliance != null);
 		}
 		catch (ArrayIndexOutOfBoundsException e) {
-			// end of xml file
 		}
 		catch (FileNotFoundException | IllegalAccessException e) {
 			System.out.println(e.getMessage());
@@ -40,10 +50,14 @@ public class ApplianceDAOImpl implements ApplianceDAO {
 		return foundAppliances;
 	}
 
+	/**
+	 * Saves a list of appliances to a file.
+	 * @param appliances list of appliances to save
+	 */
 	@Override
-	public void save(List<Appliance> appliences) {
+	public void save(List<Appliance> appliances) {
 		try(XMLEncoder encoder = new XMLEncoder(new BufferedOutputStream(new FileOutputStream(path)))){
-			for(Appliance appliance : appliences){
+			for(Appliance appliance : appliances){
 				encoder.writeObject(appliance);
 			}
 		}
@@ -52,6 +66,10 @@ public class ApplianceDAOImpl implements ApplianceDAO {
 		}
 	}
 
+	/**
+	 * Gets appliances from file
+	 * @return a list of all appliances
+	 */
 	@Override
 	public List<Appliance> parseAll() {
 		List<Appliance> appliances = new ArrayList<>();
@@ -72,6 +90,13 @@ public class ApplianceDAOImpl implements ApplianceDAO {
 		return appliances;
 	}
 
+	/**
+	 * Checks whether the appliance's properties fit certain criteria.
+	 * @param appliance appliance which criteria need to be checked
+	 * @param criteria a set of criteria
+	 * @return true if appliance fits the specified criteria
+	 * @throws IllegalAccessException if access to appliance field is closed
+	 */
 	private boolean fitsCriteria(Appliance appliance, Criteria criteria) throws IllegalAccessException {
 		if (!appliance.getClass().getSimpleName().equals(criteria.getGroupSearchName())){
 			return false;

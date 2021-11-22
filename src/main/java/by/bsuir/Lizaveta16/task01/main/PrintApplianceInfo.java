@@ -4,6 +4,9 @@ import by.bsuir.Lizaveta16.task01.entity.Appliance;
 
 import java.util.List;
 
+/**
+ * Class for printing appliance info
+ */
 public class PrintApplianceInfo {
 	
 	public static void print(List<Appliance> appliances) {

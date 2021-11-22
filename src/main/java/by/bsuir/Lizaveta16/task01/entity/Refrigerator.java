@@ -1,5 +1,8 @@
 package by.bsuir.Lizaveta16.task01.entity;
 
+/**
+ * The type of Refrigerator
+ */
 public class Refrigerator extends Appliance{
     private int powerConsumption;
     private double weight;

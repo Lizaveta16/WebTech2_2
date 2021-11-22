@@ -2,6 +2,9 @@ package by.bsuir.Lizaveta16.task01.entity;
 
 import by.bsuir.Lizaveta16.task01.entity.enums.Color;
 
+/**
+ * The type of TabletPC
+ */
 public class TabletPC extends Appliance{
     private double batteryCapacity;
     private int displayInches;

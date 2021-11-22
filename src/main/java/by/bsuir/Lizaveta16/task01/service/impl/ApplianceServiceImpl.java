@@ -14,6 +14,11 @@ import java.util.stream.Collectors;
 
 public class ApplianceServiceImpl implements ApplianceService{
 
+	/**
+	 * Finds all appliances that fit criteria.
+	 * @param criteria
+	 * @return list of found appliances
+	 */
 	@Override
 	public List<Appliance> find(Criteria criteria) {
 		if (Validator.validCriteria(criteria)) {
@@ -24,6 +29,12 @@ public class ApplianceServiceImpl implements ApplianceService{
 			return null;
 	}
 
+	/**
+	 * Gets minimal appliances by criteria.
+	 *
+	 * @param comparator defines minimal value criteria
+	 * @return list of appliances with minimal criteria defined by comparator
+	 */
 	@Override
 	public List<Appliance> getMin(Comparator<Appliance> comparator) {
 		DAOFactory factory = DAOFactory.getInstance();
@@ -38,6 +49,12 @@ public class ApplianceServiceImpl implements ApplianceService{
 		return new ArrayList<>();
 	}
 
+	/**
+	 * Gets sorted by comparator appliances.
+	 *
+	 * @param comparator for sorting appliances
+	 * @return list of sorted by comparator appliances
+	 */
 	@Override
 	public List<Appliance> getSorted(Comparator<Appliance> comparator) {
 		DAOFactory factory = DAOFactory.getInstance();
@@ -46,6 +63,10 @@ public class ApplianceServiceImpl implements ApplianceService{
 		return appliances;
 	}
 
+	/**
+	 * Saves a list of appliances to a file.
+	 * @param appliances list of appliances to save
+	 */
 	@Override
 	public void save(List<Appliance> appliances) {
 		DAOFactory factory = DAOFactory.getInstance();

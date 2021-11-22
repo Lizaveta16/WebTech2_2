@@ -1,5 +1,8 @@
 package by.bsuir.Lizaveta16.task01.entity;
 
+/**
+ * The type of Speakers
+ */
 public class Speakers extends Appliance{
     private int powerConsumption;
     private int numberOfSpeakers;

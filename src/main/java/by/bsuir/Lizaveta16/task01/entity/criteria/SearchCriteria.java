@@ -1,5 +1,8 @@
 package by.bsuir.Lizaveta16.task01.entity.criteria;
 
+/**
+ * Class containing enums of all appliances type that specify appliance's criteria that can be searched for.
+ */
 public final class SearchCriteria {
 
 	public enum Oven{

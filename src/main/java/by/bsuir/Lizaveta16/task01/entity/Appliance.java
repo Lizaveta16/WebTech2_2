@@ -1,7 +1,7 @@
 package by.bsuir.Lizaveta16.task01.entity;
-
-import java.util.List;
-
+/**
+ * The type of appliance.
+ */
 public class Appliance {
     protected double price;
     protected String name;
