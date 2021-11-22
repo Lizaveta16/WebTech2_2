@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="10.0.2" class="java.beans.XMLDecoder">
+ <object class="by.bsuir.Lizaveta16.task01.entity.Kettle">
+  <void property="color">
+   <object class="java.lang.Enum" id="Color0" method="valueOf">
+    <class>by.bsuir.Lizaveta16.task01.entity.enums.Color</class>
+    <string>Black</string>
+   </object>
+  </void>
+  <void property="name">
+   <string>Redmond</string>
+  </void>
+  <void property="powerConsumption">
+   <int>2200</int>
+  </void>
+  <void property="price">
+   <double>64.0</double>
+  </void>
+  <void property="waterCapacity">
+   <double>2.0</double>
+  </void>
+ </object>
+ <object class="by.bsuir.Lizaveta16.task01.entity.Kettle">
+  <void property="color">
+   <object class="java.lang.Enum" method="valueOf">
+    <class>by.bsuir.Lizaveta16.task01.entity.enums.Color</class>
+    <string>White</string>
+   </object>
+  </void>
+  <void property="name">
+   <string>Bosch </string>
+  </void>
+  <void property="powerConsumption">
+   <int>2200</int>
+  </void>
+  <void property="price">
+   <double>50.59</double>
+  </void>
+  <void property="waterCapacity">
+   <double>1.5</double>
+  </void>
+ </object>
+ <object class="by.bsuir.Lizaveta16.task01.entity.Oven">
+  <void property="capacity">
+   <int>23</int>
+  </void>
+  <void property="depth">
+   <int>1</int>
+  </void>
+  <void property="height">
+   <double>1.0</double>
+  </void>
+  <void property="name">
+   <string>SAMSUNG </string>
+  </void>
+  <void property="powerConsumption">
+   <int>300</int>
+  </void>
+  <void property="price">
+   <double>350.0</double>
+  </void>
+  <void property="weight">
+   <double>13.5</double>
+  </void>
+  <void property="width">
+   <double>1.0</double>
+  </void>
+ </object>
+ <object class="by.bsuir.Lizaveta16.task01.entity.Oven">
+  <void property="capacity">
+   <int>20</int>
+  </void>
+  <void property="depth">
+   <int>1</int>
+  </void>
+  <void property="height">
+   <double>1.0</double>
+  </void>
+  <void property="name">
+   <string>HORIZONT </string>
+  </void>
+  <void property="powerConsumption">
+   <int>300</int>
+  </void>
+  <void property="price">
+   <double>135.0</double>
+  </void>
+  <void property="weight">
+   <double>10.5</double>
+  </void>
+  <void property="width">
+   <double>1.0</double>
+  </void>
+ </object>
+ <object class="by.bsuir.Lizaveta16.task01.entity.Refrigerator">
+  <void property="freezerCapacity">
+   <double>107.0</double>
+  </void>
+  <void property="height">
+   <double>2.0</double>
+  </void>
+  <void property="name">
+   <string>LG</string>
+  </void>
+  <void property="overallCapacity">
+   <double>341.0</double>
+  </void>
+  <void property="powerConsumption">
+   <int>262</int>
+  </void>
+  <void property="price">
+   <double>1980.0</double>
+  </void>
+  <void property="weight">
+   <double>59.5</double>
+  </void>
+  <void property="width">
+   <double>1.0</double>
+  </void>
+ </object>
+ <object class="by.bsuir.Lizaveta16.task01.entity.Refrigerator">
+  <void property="freezerCapacity">
+   <double>108.0</double>
+  </void>
+  <void property="height">
+   <double>2.0</double>
+  </void>
+  <void property="name">
+   <string>Atlant</string>
+  </void>
+  <void property="overallCapacity">
+   <double>364.0</double>
+  </void>
+  <void property="powerConsumption">
+   <int>342</int>
+  </void>
+  <void property="price">
+   <double>1599.0</double>
+  </void>
+  <void property="weight">
+   <double>80.0</double>
+  </void>
+  <void property="width">
+   <double>1.0</double>
+  </void>
+ </object>
+ <object class="by.bsuir.Lizaveta16.task01.entity.TabletPC">
+  <void property="batteryCapacity">
+   <double>7040.0</double>
+  </void>
+  <void property="color">
+   <object class="java.lang.Enum" method="valueOf">
+    <class>by.bsuir.Lizaveta16.task01.entity.enums.Color</class>
+    <string>Grey</string>
+   </object>
+  </void>
+  <void property="displayInches">
+   <int>10</int>
+  </void>
+  <void property="flashMemoryCapacity">
+   <double>12.0</double>
+  </void>
+  <void property="memoryRom">
+   <double>8000.0</double>
+  </void>
+  <void property="name">
+   <string>Samsung Galaxy Tab A7</string>
+  </void>
+  <void property="price">
+   <double>769.0</double>
+  </void>
+ </object>
+ <object class="by.bsuir.Lizaveta16.task01.entity.TabletPC">
+  <void property="batteryCapacity">
+   <double>8720.0</double>
+  </void>
+  <void property="color">
+   <object idref="Color0"/>
+  </void>
+  <void property="displayInches">
+   <int>11</int>
+  </void>
+  <void property="flashMemoryCapacity">
+   <double>12.0</double>
+  </void>
+  <void property="memoryRom">
+   <double>16000.0</double>
+  </void>
+  <void property="name">
+   <string>Xiaomi Pad 7</string>
+  </void>
+  <void property="price">
+   <double>1299.0</double>
+  </void>
+ </object>
+</java>
