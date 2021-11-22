@@ -80,7 +80,7 @@
    <string>HORIZONT </string>
   </void>
   <void property="powerConsumption">
-   <int>300</int>
+   <int>400</int>
   </void>
   <void property="price">
    <double>135.0</double>

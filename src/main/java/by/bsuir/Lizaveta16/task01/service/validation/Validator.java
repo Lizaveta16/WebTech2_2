@@ -9,7 +9,7 @@ import java.util.Set;
 public class Validator {
 
 	public static boolean validCriteria(Criteria criteria){
-		Boolean res = switch (criteria.getGroupSearchName()){
+		return switch (criteria.getGroupSearchName()){
 			case "Kettle" -> doesCriteriaExists(criteria, SearchCriteria.Kettle.class);
 			case "Laptop" -> doesCriteriaExists(criteria, SearchCriteria.Laptop.class);
 			case "Oven" -> doesCriteriaExists(criteria, SearchCriteria.Oven.class);
@@ -19,7 +19,6 @@ public class Validator {
 			case "VacuumCleaner" -> doesCriteriaExists(criteria, SearchCriteria.VacuumCleaner.class);
 			default -> false;
 		};
-		return res;
 	}
 
 	private static boolean doesCriteriaExists(Criteria criteria, Class<? extends Enum<?>> e){

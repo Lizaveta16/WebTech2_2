@@ -19,7 +19,7 @@ public class Main {
 //			new Kettle("Redmond", 64, 2200, 2, Color.Black),
 //			new Kettle("Bosch ", 50.59, 2200, 1.5, Color.White),
 //			new Oven("SAMSUNG ", 350, 300, 13.5, 23, 1, 1, 1),
-//			new Oven("HORIZONT ", 135, 300, 10.5, 20, 1, 1, 1),
+//			new Oven("HORIZONT ", 135, 400, 10.5, 20, 1, 1, 1),
 //			new Refrigerator("LG", 1980, 262, 59.5, 107, 341, 2, 1),
 //			new Refrigerator("Atlant", 1599, 342, 80, 108, 364, 2, 1),
 //			new TabletPC("Samsung Galaxy Tab A7", 769,
@@ -32,11 +32,19 @@ public class Main {
 		List<Appliance> appliances;
 		ServiceFactory factory = ServiceFactory.getInstance();
 		ApplianceService service = factory.getApplianceService();
-		Criteria kettleCriteria = new Criteria(SearchCriteria.Kettle.class.getName());
+		Criteria kettleCriteria = new Criteria(SearchCriteria.Kettle.class.getSimpleName());
 		appliances = service.find(kettleCriteria);
 		if (appliances != null) {
 			System.out.println("All kettles: ");
 			PrintApplianceInfo.print(appliances);
+		}
+
+		Criteria ovenCriteria = new Criteria(SearchCriteria.Oven.class.getSimpleName());
+		ovenCriteria.add("powerConsumption", 300);
+		List<Appliance> ovens300 = service.find(ovenCriteria);
+		if(ovens300 != null) {
+			System.out.println("\nOvens with a capacity of 300:: ");
+			PrintApplianceInfo.print(ovens300);
 		}
 
 		System.out.println();
